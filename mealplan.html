@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody Friday | Essensplan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                Foody Friday
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Startseite</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Spiele</a></li>
+                <li class="nav-item"><a href="chat.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="mealplan.html" class="nav-link active">Essensplan</a></li>
+                <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="mealplan-page">
+        <div class="mealplan-header">
+            <h1 class="section-title">Essensplan</h1>
+            <p class="section-subtitle">Speiseplan für das gesamte Jahr</p>
+            <div class="mealplan-controls">
+                <button class="btn btn-secondary" id="prevMonth"><i class="fas fa-chevron-left"></i> Vorheriger Monat</button>
+                <h2 id="currentMonth">Juli 2025</h2>
+                <button class="btn btn-secondary" id="nextMonth">Nächster Monat <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="mealplan-container glass">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <div class="day-header">Montag</div>
+                    <div class="day-header">Dienstag</div>
+                    <div class="day-header">Mittwoch</div>
+                    <div class="day-header">Donnerstag</div>
+                    <div class="day-header">Freitag</div>
+                    <div class="day-header">Samstag</div>
+                    <div class="day-header">Sonntag</div>
+                </div>
+                
+                <div class="calendar-body">
+                    <!-- Wird dynamisch mit JavaScript befüllt -->
+                </div>
+            </div>
+            
+            <div class="mealplan-actions">
+                <div class="upload-section">
+                    <h3>Essensplan aktualisieren</h3>
+                    <p>Laden Sie eine neue Excel-Datei hoch, um den Essensplan zu aktualisieren:</p>
+                    <input type="file" id="excelUpload" accept=".xlsx, .xls">
+                    <button class="btn btn-primary" id="uploadButton">Datei hochladen</button>
+                </div>
+                
+                <div class="legend">
+                    <h3>Legende</h3>
+                    <ul>
+                        <li><span class="legend-vegetarian"></span> Vegetarisch</li>
+                        <li><span class="legend-vegan"></span> Vegan</li>
+                        <li><span class="legend-meat"></span> Mit Fleisch</li>
+                        <li><span class="legend-fish"></span> Fisch</li>
+                        <li><span class="legend-special"></span> Besonderes Gericht</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Footer wie in index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initMealPlan();
+            initScrollHeader();
+        });
+    </script>
+</body>
+</html>

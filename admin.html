@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody Friday | Admin-Bereich</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Include TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                Foody Friday
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Startseite</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Spiele</a></li>
+                <li class="nav-item"><a href="chat.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="mealplan.html" class="nav-link">Essensplan</a></li>
+                <li class="nav-item"><a href="admin.html" class="nav-link active">Admin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="admin-page">
+        <div class="admin-header">
+            <h1 class="section-title">Admin-Bereich</h1>
+            <p class="section-subtitle">Verwalten Sie Inhalte der Website</p>
+        </div>
+
+        <div class="admin-container">
+            <div class="admin-sidebar">
+                <ul class="admin-menu">
+                    <li class="admin-menu-item active" data-tab="news">Firmennews</li>
+                    <li class="admin-menu-item" data-tab="mealplan">Essensplan</li>
+                    <li class="admin-menu-item" data-tab="games">Spiele</li>
+                    <li class="admin-menu-item" data-tab="users">Benutzer</li>
+                    <li class="admin-menu-item" data-tab="settings">Einstellungen</li>
+                </ul>
+            </div>
+            
+            <div class="admin-content">
+                <!-- News Management -->
+                <div class="admin-tab active" id="news-tab">
+                    <h2>News verwalten</h2>
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" id="newNewsBtn"><i class="fas fa-plus"></i> Neue News erstellen</button>
+                    </div>
+                    
+                    <div class="news-list">
+                        <div class="news-item-admin">
+                            <div class="news-item-header">
+                                <h3>Sommerfest am 20. August</h3>
+                                <div class="news-item-meta">
+                                    <span>15. Juli 2025</span>
+                                    <span>Kategorie: Allgemein</span>
+                                </div>
+                            </div>
+                            <div class="news-item-actions">
+                                <button class="btn btn-edit"><i class="fas fa-edit"></i> Bearbeiten</button>
+                                <button class="btn btn-delete"><i class="fas fa-trash"></i> Löschen</button>
+                                <button class="btn btn-preview"><i class="fas fa-eye"></i> Vorschau</button>
+                            </div>
+                        </div>
+                        
+                        <div class="news-item-admin">
+                            <div class="news-item-header">
+                                <h3>Neue Gesundheitsvorteile</h3>
+                                <div class="news-item-meta">
+                                    <span>10. Juli 2025</span>
+                                    <span>Kategorie: Benefits</span>
+                                </div>
+                            </div>
+                            <div class="news-item-actions">
+                                <button class="btn btn-edit"><i class="fas fa-edit"></i> Bearbeiten</button>
+                                <button class="btn btn-delete"><i class="fas fa-trash"></i> Löschen</button>
+                                <button class="btn btn-preview"><i class="fas fa-eye"></i> Vorschau</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-editor" id="newsEditor" style="display: none;">
+                        <h3>News bearbeiten/erstellen</h3>
+                        <div class="editor-form">
+                            <div class="form-group">
+                                <label for="newsTitle">Titel</label>
+                                <input type="text" id="newsTitle" placeholder="Titel der News">
+                            </div>
+                            <div class="form-group">
+                                <label for="newsCategory">Kategorie</label>
+                                <select id="newsCategory">
+                                    <option value="allgemein">Allgemein</option>
+                                    <option value="benefits">Benefits</option>
+                                    <option value="events">Events</option>
+                                    <option value="it">IT</option>
+                                    <option value="hr">HR</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newsDate">Datum</label>
+                                <input type="date" id="newsDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="newsContent">Inhalt</label>
+                                <textarea id="newsContent"></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn btn-secondary" id="cancelEdit">Abbrechen</button>
+                                <button class="btn btn-primary" id="saveNews">Speichern</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mealplan Management -->
+                <div class="admin-tab" id="mealplan-tab" style="display: none;">
+                    <h2>Essensplan verwalten</h2>
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" id="uploadMealplanBtn"><i class="fas fa-upload"></i> Excel-Datei hochladen</button>
+                    </div>
+                    
+                    <div class="mealplan-preview">
+                        <h3>Aktueller Essensplan (Juli 2025)</h3>
+                        <div class="preview-placeholder">
+                            <i class="fas fa-calendar-alt"></i>
+                            <p>Vorschau des Essensplans wird hier angezeigt</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Weitere Tabs hier... -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Footer wie in index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initAdminPage();
+            initScrollHeader();
+            
+            // TinyMCE Initialisierung
+            tinymce.init({
+                selector: '#newsContent',
+                plugins: 'link image lists code',
+                toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright | bullist numlist | link image | code',
+                menubar: false,
+                height: 300
+            });
+        });
+    </script>
+</body>
+</html>

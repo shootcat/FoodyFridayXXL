@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody Friday | Startseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                Foody Friday
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Startseite</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Spiele</a></li>
+                <li class="nav-item"><a href="chat.html" class="nav-link">Community</a></li>
+                <li class="nav-item"><a href="mealplan.html" class="nav-link">Essensplan</a></li>
+                <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Das Firmenportal der Zukunft</h1>
+            <p class="hero-subtitle">Foody Friday verbindet Information, Unterhaltung und Community in einem eleganten, modernen Design für Ihren Arbeitsalltag</p>
+            <div class="hero-buttons">
+                <a href="#dashboard" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Jetzt entdecken
+                </a>
+                <a href="news.html" class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i> News lesen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="dashboard" id="dashboard">
+        <h2 class="section-title">Ihr persönliches Dashboard</h2>
+        
+        <div class="dashboard-grid">
+            <!-- Wetter Widget -->
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h3 class="card-title">Aktuelles Wetter</h3>
+                </div>
+                <div class="card-body">
+                    <div class="weather">
+                        <div class="weather-info">
+                            <div class="weather-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="weather-temp">24°C</div>
+                        </div>
+                        <div class="weather-details">
+                            <div class="weather-city">Berlin</div>
+                            <div class="weather-desc">Sonnig, leichte Bewölkung</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Widget -->
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-newspaper"></i>
+                    <h3 class="card-title">Neueste Firmennews</h3>
+                </div>
+                <div class="card-body">
+                    <div class="news-item">
+                        <div class="news-date">15. Juli 2025 • Allgemein</div>
+                        <h4 class="news-title">Sommerfest am 20. August</h4>
+                        <p class="news-content">Unser jährliches Sommerfest findet dieses Jahr am 20. August statt. Alle Mitarbeiter sind herzlich eingeladen!</p>
+                        <a href="news.html" class="news-link">Mehr lesen</a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">10. Juli 2025 • Benefits</div>
+                        <h4 class="news-title">Neue Gesundheitsvorteile</h4>
+                        <p class="news-content">Ab sofort bieten wir erweiterte Gesundheitsleistungen für alle Mitarbeiter an.</p>
+                        <a href="news.html" class="news-link">Mehr lesen</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Suchleiste -->
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-search"></i>
+                    <h3 class="card-title">Websuche</h3>
+                </div>
+                <div class="card-body">
+                    <p>Suchen Sie im Web mit Google:</p>
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Suchbegriff eingeben...">
+                        <button class="search-button">Suchen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fun Section -->
+        <h2 class="section-title">Spaß & Unterhaltung</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <div class="game-content">
+                    <h4 class="game-title">Puzzle Mania</h4>
+                    <p class="game-desc">Knifflige Puzzles für kluge Köpfe</p>
+                    <a href="games.html#puzzle" class="play-button">
+                        <i class="fas fa-play"></i> Spielen
+                    </a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-icon">
+                    <i class="fas fa-chess"></i>
+                </div>
+                <div class="game-content">
+                    <h4 class="game-title">Chess Masters</h4>
+                    <p class="game-desc">Strategisches Schach gegen Kollegen</p>
+                    <a href="games.html#chess" class="play-button">
+                        <i class="fas fa-play"></i> Spielen
+                    </a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-icon">
+                    <i class="fas fa-dice"></i>
+                </div>
+                <div class="game-content">
+                    <h4 class="game-title">Lucky Dice</h4>
+                    <p class="game-desc">Würfelspaß mit hohem Suchtfaktor</p>
+                    <a href="games.html#dice" class="play-button">
+                        <i class="fas fa-play"></i> Spielen
+                    </a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-icon">
+                    <i class="fas fa-memory"></i>
+                </div>
+                <div class="game-content">
+                    <h4 class="game-title">Memory Match</h4>
+                    <p class="game-desc">Testen Sie Ihr Gedächtnis</p>
+                    <a href="games.html#memory" class="play-button">
+                        <i class="fas fa-play"></i> Spielen
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Community Preview -->
+        <h2 class="section-title">Community Highlights</h2>
+        <div class="comment-container glass">
+            <div class="comment">
+                <div class="comment-avatar">TS</div>
+                <div class="comment-content">
+                    <div class="comment-author">
+                        Thomas Schmidt <span>Admin</span>
+                    </div>
+                    <p class="comment-text">Hat jemand Tipps für das Sommerfest? Soll ich Salat oder Dessert mitbringen? 😊</p>
+                    <div class="comment-time">Vor 2 Stunden</div>
+                    <div class="comment-actions">
+                        <span class="comment-action"><i class="far fa-heart"></i> 5</span>
+                        <span class="comment-action"><i class="far fa-comment"></i> 3 Antworten</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-avatar">AS</div>
+                <div class="comment-content">
+                    <div class="comment-author">
+                        Anna Schulz <span>Projektleiterin</span>
+                    </div>
+                    <p class="comment-text">Ich bringe auf jeden Fall meinen berühmten Nudelsalat mit! Der ist immer der Hit! 🎉</p>
+                    <div class="comment-time">Vor 1 Stunde</div>
+                    <div class="comment-actions">
+                        <span class="comment-action"><i class="far fa-heart"></i> 8</span>
+                        <span class="comment-action"><i class="far fa-comment"></i> 2 Antworten</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="chat.html" class="btn btn-primary">
+                    <i class="fas fa-comments"></i> Zum Community-Chat
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Foody Friday</h3>
+                <p>Ihr modernes Firmenportal mit allen wichtigen Informationen, Tools und Unterhaltung an einem Ort.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Bereiche</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Startseite</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Aktuelle News</a></li>
+                    <li><a href="games.html"><i class="fas fa-gamepad"></i> Spielebereich</a></li>
+                    <li><a href="chat.html"><i class="fas fa-comments"></i> Community</a></li>
+                    <li><a href="mealplan.html"><i class="fas fa-calendar-alt"></i> Essensplan</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Ressourcen</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-book"></i> Mitarbeiterhandbuch</a></li>
+                    <li><a href="#"><i class="fas fa-umbrella-beach"></i> Urlaubsplanung</a></li>
+                    <li><a href="#"><i class="fas fa-heartbeat"></i> Gesundheitsangebote</a></li>
+                    <li><a href="#"><i class="fas fa-graduation-cap"></i> Schulungen</a></li>
+                    <li><a href="#"><i class="fas fa-headset"></i> IT-Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Kontakt</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Hauptstraße 123, 10115 Berlin</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +49 30 12345678</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> info@foodyfriday.de</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Mo-Fr: 8:00 - 18:00</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 Foody Friday GmbH. Alle Rechte vorbehalten. | <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initParticles();
+            updateWeather();
+            initScrollHeader();
+        });
+    </script>
+</body>
+</html>

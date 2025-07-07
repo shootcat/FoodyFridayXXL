@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody Friday | Community-Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                Foody Friday
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Startseite</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Spiele</a></li>
+                <li class="nav-item"><a href="chat.html" class="nav-link active">Community</a></li>
+                <li class="nav-item"><a href="mealplan.html" class="nav-link">Essensplan</a></li>
+                <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="chat-page">
+        <div class="chat-header">
+            <h1 class="section-title">Community-Chat</h1>
+            <p class="section-subtitle">Tauschen Sie sich mit Kollegen aus</p>
+        </div>
+
+        <div class="chat-container glass">
+            <div class="chat-sidebar">
+                <div class="user-profile">
+                    <div class="user-avatar-large" id="userAvatar">GU</div>
+                    <h3 id="userName">Gast Benutzer</h3>
+                    <button class="btn btn-secondary" id="loginButton">Anmelden</button>
+                </div>
+                
+                <div class="chat-channels">
+                    <h4>Chat-Kanäle</h4>
+                    <ul>
+                        <li class="channel active"># Allgemein</li>
+                        <li class="channel"># Sommerfest</li>
+                        <li class="channel"># IT-Support</li>
+                        <li class="channel"># Gesundheit</li>
+                        <li class="channel"># Spiele</li>
+                    </ul>
+                </div>
+                
+                <div class="online-users">
+                    <h4>Online Benutzer <span id="onlineCount">0</span></h4>
+                    <ul id="onlineUsersList">
+                        <!-- Wird dynamisch befüllt -->
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="chat-main">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Nachrichten werden dynamisch eingefügt -->
+                </div>
+                
+                <div class="chat-input-area">
+                    <div class="chat-tools">
+                        <button class="chat-tool" id="emojiButton"><i class="far fa-smile"></i></button>
+                        <button class="chat-tool" id="gifButton"><i class="fas fa-film"></i></button>
+                        <button class="chat-tool" id="uploadButton"><i class="fas fa-paperclip"></i></button>
+                    </div>
+                    <input type="text" class="chat-input" id="messageInput" placeholder="Schreiben Sie eine Nachricht..." disabled>
+                    <button class="chat-send" id="sendButton" disabled><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Footer wie in index.html -->
+    </footer>
+
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initFirebase();
+            initChat();
+            initScrollHeader();
+        });
+    </script>
+</body>
+</html>
