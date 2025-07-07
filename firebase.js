@@ -2,12 +2,12 @@
 
 // Firebase-Konfiguration - Hier Ihre eigenen Werte eintragen
 const firebaseConfig = {
-    apiKey: "IHR_API_KEY",
-    authDomain: "IHR_PROJEKT.firebaseapp.com",
-    projectId: "IHR_PROJEKT",
-    storageBucket: "IHR_PROJEKT.appspot.com",
-    messagingSenderId: "IHR_SENDER_ID",
-    appId: "IHR_APP_ID"
+     apiKey: "AIzaSyCnJByYr-O4k174w1IXRz1QcrS1b-TVPow",
+     authDomain: "ff-komentare.firebaseapp.com",
+     projectId: "ff-komentare",
+     storageBucket: "ff-komentare.firebasestorage.app",
+     messagingSenderId: "1007258832780",
+     appId: "1:1007258832780:web:779e56da27b0948f5350a9
 };
 
 // Firebase initialisieren
